@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+nltk
+beautifulsoup4
+# https://github.com/PrithivirajDamodaran/Parrot_Paraphraser

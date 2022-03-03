@@ -1,0 +1,7 @@
+version: "3"
+services:
+  nlp-para-summarize:
+    image: guestros/nlp-paraphrase-summarize-api:latest
+    build: .
+    ports:
+      - "32310:8000"
