@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: nlp-para-summarize
+  name: nlp-para-summarize
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: nlp-para-summarize
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        io.kompose.service: nlp-para-summarize
+    spec:
+      containers:
+        - image: guestros/nlp-paraphrase-summarize-api:latest
+          name: nlp-para-summarize
+          ports:
+            - containerPort: 8000
+          resources: {}
+      restartPolicy: Always
+status: {}
