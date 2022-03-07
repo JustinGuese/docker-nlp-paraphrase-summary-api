@@ -11,4 +11,4 @@ RUN apt purge -y --auto-remove gcc git build-essential
 COPY ./src/install.py /app
 RUN python install.py
 COPY ./src/nlpapp.py /app
-CMD ["uvicorn", "nlpapp:app", "--host", "0.0.0.0"]
+CMD ["uvicorn", "nlpapp:app", "--host", "0.0.0.0", "--workers", "1"]
